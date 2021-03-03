@@ -24,6 +24,8 @@ namespace classesTest
         }
         [Theory]
         [InlineData(100, 0)]
+        [InlineData(50, 50)]
+        [InlineData(0.25, 99.75)]
         public void Withdraw(double amount, double expectedVal)
         {
             classes.Account accountInstance = new classes.Account();
@@ -32,6 +34,8 @@ namespace classesTest
         }
         [Theory]
         [InlineData(100, 200)]
+        [InlineData(1, 101)]
+        [InlineData(0.50, 100.50)]
         public void Deposit(double amount, double expectedVal)
         {
             classes.Account accountInstance = new classes.Account();
